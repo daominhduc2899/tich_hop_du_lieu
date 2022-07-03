@@ -407,7 +407,7 @@ class Clickbuy_Apple_Watch(scrapy.Spider):
                 },
             )
 
-            
+
 
     def parse(self, response):
         headers = {
@@ -638,6 +638,9 @@ class dienthoaimoi_iphone(scrapy.Spider):
         )
 
 
+
+
+
 class dienthoaimoi_applewatch(scrapy.Spider):
     name = 'dienthoaimoi_applewatch'
     start_urls = ["https://dienthoaimoi.vn/dong-ho-apple-watch-pc298.html"]
@@ -654,6 +657,8 @@ class dienthoaimoi_applewatch(scrapy.Spider):
                 }
             end
             """
+
+            
 
     def start_requests(self):
         headers = {

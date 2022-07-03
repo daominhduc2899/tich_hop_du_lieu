@@ -230,6 +230,8 @@ class xtmobile_iphone(scrapy.Spider):
 
             thongtin = soup.find('ul', class_='parametdesc').find_all('strong')
 
+
+
             yield {
                 'Tên sản phẩm': item.css('h3 a::text')[0].get(),
                 'Giá sản phẩm': price,
@@ -366,6 +368,7 @@ class Clickbuy_iphone(scrapy.Spider):
                 "Độ phân giải màn hình": dophangiai,
                 'Pin': pin,
                 # 'Hệ điều hành': hedieuhanh,
+
                 'Kích thước màn hình': kichthuocmanhinh,
                 'Bluetooth': '',
                 'Ram': ram,
@@ -403,6 +406,8 @@ class Clickbuy_Apple_Watch(scrapy.Spider):
                     "splash": {"endpoint": "execute", "args": {"lua_source": self.script}}
                 },
             )
+
+            
 
     def parse(self, response):
         headers = {
